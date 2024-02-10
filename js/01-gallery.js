@@ -6,6 +6,7 @@ console.log(galleryItems);
 const gallery = document.querySelector(".gallery");
 
 galleryItems.forEach((item) => {
+    console.log(item);
 let li = `
 <li class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
