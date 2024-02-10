@@ -19,4 +19,5 @@ let li = `
   </a>
 </li>
 `;
+gallery.innerHTML += li;
 });
