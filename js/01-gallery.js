@@ -12,9 +12,9 @@ let li = `
   <a class="gallery__link" href="large-image.jpg">
     <img
       class="gallery__image"
-      src="small-image.jpg"
-      data-source="large-image.jpg"
-      alt="Image description"
+      src="${item.preview}"
+      data-source="${item.original}"
+      alt="${item.description}"
     />
   </a>
 </li>
