@@ -5,7 +5,7 @@ console.log(galleryItems);
 const galleryContainer = document.querySelector("ul.gallery");
 
 function createGalleryItem(array) {
-    array.map(({preview, original, description}) => {
+    return array.map(({preview, original, description}) => {
         return `
         <a class = "gallery__item" href="${original}>
         <img class = "gallery__image" sec = "${preview}" alt = "${description} />
@@ -15,3 +15,4 @@ function createGalleryItem(array) {
 
 }
 const photosMarkup = createGalleryItem(galleryItems);
+galleryContainer.insertAdjacentHTML("beforeend", photosMarkup);
