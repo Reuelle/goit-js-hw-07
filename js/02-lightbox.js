@@ -19,3 +19,6 @@ function createGalleryItem(array) {
 }
 const photosMarkup = createGalleryItem(galleryItems);
 galleryContainer.insertAdjacentHTML("beforeend", photosMarkup);
+
+const galleryHandler = new SimpleLightbox(".gallery a");
+galleryHandler.on(show.SimpleLightbox);
