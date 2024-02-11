@@ -6,13 +6,15 @@ console.log(galleryItems);
 const galleryContainer = document.querySelector("ul.gallery");
 
 function createGalleryItem(array) {
-    return array.map(({preview, original, description}) => {
+    return array
+    .map(({preview, original, description}) => {
         return `
-        <a class="gallery__item" href="${original}>
-        <img class="gallery__image" src="${preview}" alt="${description} />
+        <a class="gallery__item" href="${original}">
+        <img class="gallery__image" src="${preview}" alt="${description}" />
         </a>
         `;
-    }) .join("");
+    }) 
+    .join("");
 
 }
 const photosMarkup = createGalleryItem(galleryItems);
