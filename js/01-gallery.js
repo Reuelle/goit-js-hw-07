@@ -21,3 +21,11 @@ let li = `
 `;
 gallery.innerHTML += li;
 });
+gallery.addEventListener('click', (e) => {
+  if (e.target.tagName === 'img') {
+    const largeImageUrl = e.target.dataset.src;
+    openModal(largeImageUrl);
+  }
+});
+function openModal(largeImageUrl)
+{ }
