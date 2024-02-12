@@ -21,10 +21,4 @@ let li = `
 `;
 gallery.innerHTML += li;
 });
-document.querySelector('.gallery').onclick = () => {
 
-	basicLightbox.create(`
-		<img width="1900" height="1000" src="https://placehold.it/1900x1000">
-	`).show()
-
-}
