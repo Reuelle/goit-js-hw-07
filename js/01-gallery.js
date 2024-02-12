@@ -9,7 +9,7 @@ galleryItems.forEach((item) => {
     console.log(item);
 let li = `
 <li class="gallery__item">
-  <a class="gallery__link" href="large-image.jpg">
+  <a class="gallery__link" href="javascript:void(0)">
     <img
       class="gallery__image"
       src="${item.preview}"
@@ -20,5 +20,13 @@ let li = `
 </li>
 `;
 gallery.innerHTML += li;
+});
+
+gallery.addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG') {
+    let bigImage = e.target.getAttribute("data-source");
+    let instance = basicLightbox.create(`<img src="${bigImage}" width="800" height="600"/>`);
+    instance.show();
+  }
 });
 
